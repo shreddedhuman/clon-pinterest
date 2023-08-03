@@ -12,7 +12,7 @@
 </head>
 
 <body class="body">
-    <nav class="topnav">
+    <nav class="topnav" id="navbar-pinterest">
         <ul class="icons-container">
             <li>
                 <a href="https://www.pinterest.com.mx"><img src="./images/ogro.png" alt="Ogrerest"></a>
@@ -20,15 +20,15 @@
             <li><a href="#">Explorar</a></li>
         </ul>
         <div class="search-container">
-            <input type="text" placeholder="Buscar..." name="search">
+            <input class="finder" type="text" placeholder="Buscar..." name="search">
         </div>
-        <section class="access-container">
-            <i class="fa fa-user"></i>
-            <i class="fa fa-comment"></i>
-            <i class="fa fa-bell"></i>
-        </section>
+        <div class="access-container">
+            <i id="profile-img" class="fa fa-user"></i>
+            <i id="notifications" class="fa fa-comment"></i>
+            <i id="messages" class="fa fa-bell"></i>
+        </div>
     </nav>
-    <main>
+    <main id="content">
         <div class="images">
             <div class="card.image">
                 <img src="./images/alien.jpeg" alt="">
