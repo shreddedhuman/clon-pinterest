@@ -90,9 +90,11 @@
 
 .images {
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 1rem;
-  grid-template-rows: repeat(3, minmax(50px, 200px));
+  grid-template-rows: repeat(4, minmax(50px, 200px));
+  grid-auto-rows: max-content;
+  grid-auto-columns: max-content;
   filter: blur(0px);
 }
 
@@ -100,6 +102,7 @@
   background-color: rgb(0, 0, 0);
   border-radius: 15px;
   overflow: hidden;
+  height: auto;
 }
 
 .images div:nth-child(1) {
@@ -114,8 +117,20 @@
   grid-row: 2/4;
 }
 
+.images div:nth-child(6) {
+  grid-row: 3/5;
+}
+
 .images div:nth-child(8) {
   grid-column: 3/5;
+}
+
+.images div:last-of-type {
+  grid-column: 4/5;
+}
+
+.images div:last-child {
+  grid-row: -2
 }
 
 .images div img {
@@ -149,12 +164,10 @@
   display: inline-block;
 }
 
-
 .image-container img {
   width: 300px;
   height: auto;
 }
-
 
 .overlay {
   position: absolute;
@@ -166,11 +179,9 @@
   transition: opacity 0.3s ease;
 }
 
-
 .image-container:hover .overlay {
   opacity: 0.7;
 }
-
 
 .button {
   display: block;
@@ -198,4 +209,12 @@
 .button2 {
   bottom: 20px;
   right: 60px;
+}
+
+@media all and (max-width: 600px) {
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr))
+    gap: 32px;
+  }
 }
