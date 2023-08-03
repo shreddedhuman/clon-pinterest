@@ -97,6 +97,12 @@
   grid-auto-columns: max-content;
   filter: blur(0px);
 }
+@media screen and (max-width: 600px) {
+  .images {
+    grid-template-columns: repeat(2, minmax(150px,1fr));
+  }
+}
+
 
 .images div {
   background-color: rgb(0, 0, 0);
@@ -211,10 +217,11 @@
   right: 60px;
 }
 
-@media all and (max-width: 600px) {
+/* @media all and (max-width: 600px) {
   .images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr))
     gap: 32px;
   }
 }
+*/
